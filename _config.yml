@@ -1,119 +1,126 @@
 # Site
-repository: Git repository where your resume will be hosted, only required if you are hosting on GitHub (eg. sproogen/modern-resume-theme)
+# repository: Git repository where your resume will be hosted, only required if you are hosting on GitHub (eg. sproogen/modern-resume-theme)
 # favicon: Directory of your favicon (eg. images/favicon.ico)(optional)
 
 # Content configuration version
 version: 2
 
 # Personal info
-name: Your Name
-title: Your job title
-email: Your email (optional)
-# email_title: Email (Email title override)
-phone: Your phone number (optional)
-# phone_title: Phone (Phone title override)
-website: Your website (eg. https://google.com)(optional)
-# website_title: Web (Website title override)
+name: Abdul Samad
+title: Computer Science Student | ML & Full-Stack Engineer
+email: junaid.abdulsamad@gmail.com
+phone: +92 334 5130 822
+# website: Your website (eg. https://google.com)(optional)
 
 # Dark Mode (true/false/never)
 darkmode: false
 
 # Social links
-twitter_username: jekyllrb
-github_username:  jekyll
-stackoverflow_username: "00000001"
-dribbble_username: jekyll
-facebook_username: jekyll
-flickr_username: jekyll
-instagram_username: jekyll
-linkedin_username: jekyll
-xing_username: jekyll
-pinterest_username: jekyll
-youtube_username: jekyll
-orcid_username: 0000-0000-0000-0000
-googlescholar_username: D847cGsAAAAJ
-
-# Additional icon links
-additional_links:
-- title: Link name
-  icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-  url: Link url (eg. https://google.com)
-# - title: another link
-#   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-#   url: Link url (eg. https://google.com)
-
-# Google Analytics and Tag Manager
-# Using more than one of these may cause issues with reporting
-# gtm: "GTM-0000000"
-# gtag: "UA-00000000-0"
-# google_analytics: "UA-00000000-0"
+github_username: AbdulSamad  # Update with your actual GitHub username
+linkedin_username: AbdulSamad  # Update with your actual LinkedIn username
 
 # About Section
-# about_title: About Me (Use this to override about section title)
-about_profile_image: Directory of profile image (eg. images/profile.jpg)
-about_content: | # this will include new lines to allow paragraphs
-  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
+about_profile_image: images/profile.jpg
+about_content: |
+  I'm a Computer Science student at Lahore University of Management Sciences (LUMS) with a strong interest in Machine Learning, Generative AI, and Full-Stack Engineering. I enjoy building intelligent systems — from federated learning pipelines and LLM alignment experiments to full-stack interviewing platforms.
 
-  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
-    - Lists
-    - Tables
-    - <a href="google.com">Links</a>
-    - Images ![alt text](/images/landscape-trees.jpg "Trees")
+  My experience spans deep learning research, AI-powered application development, and teaching programming to the next generation of coders. I'm passionate about bridging the gap between cutting-edge ML research and real-world product engineering.
 
 content:
-  - title: Projects # Title for the section
-    layout: list # Type of content section (list/text)
+  - title: Projects
+    layout: list
     content:
       - layout: left
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: Project name
-        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        link_text: Link Text
+        border: weak
+        title: Adaptive AI Interviewer
         additional_links:
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
+          - title: GitHub
             icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+            url: https://github.com  # Update with actual repo URL
         quote: >
-          Short overview of the project (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
+          An end-to-end AI-powered technical interview platform with adaptive question selection, voice orchestration, and real-time code evaluation.
+        description: |
+          - Implemented secure authentication and session management (signup, login, 2FA, password reset) using **Clerk**, enabling role-based interviewer/interviewee flows and robust token handling for live interview sessions.
+          - Developed an intelligent interview generation engine that automates structured candidate evaluation using **semantic embeddings** to match job descriptions to a tagged question bank, dynamically filtered by seniority-level difficulty.
+          - Built a Codeforces problem ingestion pipeline that scrapes, enriches, and stores 1,300+ problems with LLM-generated solutions and hidden test cases, evaluates submissions via a **self-hosted Piston sandbox**, and surfaces real-time runtime metrics.
+          - Designed adaptive interview orchestration: embedding-based question matching, **ElevenLabs TTS**-based spoken interview orchestration, per-question response storage, and a multi-dimensional scoring pipeline (correctness + communication quality) driving explainable, real-time next-question selection.
+
+          **Tech Stack:** React, Node.js, MongoDB, Clerk, ElevenLabs, Piston
+
+      - layout: left
+        border: weak
+        title: FedPACE
+        link: https://github.com  # Update with actual GitHub repo URL
+        link_text: View on GitHub
+        additional_links:
+          - title: GitHub
+            icon: fab fa-github
+            url: https://github.com  # Update with actual repo URL
+        quote: >
+          A federated learning framework improving global accuracy and domain generalization via a three-stage aggregation pipeline.
+        description: |
+          - Increased CIFAR-10 global accuracy by **+2.5%** over the Fed-GGA baseline by designing a three-stage federated pipeline (annealing → sign-agreement dampening → sign-disagreement pruning) and running seed-averaged experiments to validate robustness across heterogeneous client data distributions.
+          - Improved domain generalization on **PACS by +3.89%** by integrating sign-agreement weighting and late-stage pruning to filter spurious client parameters and extract invariant features.
+          - Improved training stability through systematic ablations and hyperparameter sweeps (K, β, pruning threshold), synthesizing practical schedules used for full experiments.
+
+          **Tech Stack:** Python, PyTorch, NumPy, Matplotlib, Pandas
+
+      - layout: left
+        border: weak
+        title: Strategic LLM Alignment
+        additional_links:
+          - title: GitHub
+            icon: fab fa-github
+            url: https://github.com  # Update with actual repo URL
+        quote: >
+          Research into decoding strategies and preference alignment for large language models using DPO and PEFT/LoRA.
+        description: |
+          - Identified that **Top-P (nucleus) sampling** yields a superior reward–diversity frontier by implementing a decoding suite (Greedy, Beam, Top-K, Top-P) and measuring Distinct-N/reward metrics across temperature sweeps.
+          - Implemented **Direct Preference Optimization (DPO)** with PEFT/LoRA (rank=8, α=16), achieving low mean token KL (≈ 0.016) while preserving perplexity (≈ 11) and evaluating robustness under adversarial perturbations.
+          - Enabled resource-efficient DPO training on constrained GPUs by integrating **8-bit model loading** with LoRA adapters, reducing VRAM needs and allowing broader hyperparameter exploration.
+
+          **Tech Stack:** Python, PyTorch, NumPy, Matplotlib, PEFT/LoRA
+
   - title: Experience
     layout: list
     content:
       - layout: right
-        title: Company name
-        sub_title: Job title
-        caption: Date Range (eg. November 2016 - present)
-        link: Link to company (optional)
+        title: CodeKids Pakistan
+        sub_title: Coding Instructor
+        caption: October 2023 – May 2025
         quote: >
-          Short description of the company (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of role
+          A coding education company focused on teaching programming to young learners through project-based and STEM-driven curricula.
+        description: |
+          - Achieved a **90% course completion rate** for 50+ students by designing and delivering tailored coding curricula in Python, C++, HTML, and Roblox, prioritizing project-based learning and STEM engagement.
+          - Enhanced student proficiency in **JavaScript and Web Development** by creating an end-to-end remote curriculum including lectures and assignments to prepare students for real-world software engineering.
+
   - title: Education
     layout: list
     content:
       - layout: top-right
-        title: Institution name
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
+        title: Lahore University of Management Sciences (LUMS)
+        sub_title: Bachelor of Science in Computer Science
+        caption: Expected Graduation, May 2026
         quote: >
-          Short institution or course description (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of qualification
-  - title: A Little More About Me
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+          One of Pakistan's leading research universities, consistently ranked among the top institutions in South Asia.
+        description: |
+          **GPA:** 3.46 / 4.00
 
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+          **Relevant Coursework:** Advanced Topics in ML, Deep Learning, Generative AI, Software Engineering, Machine Learning, Artificial Intelligence, Data Structures, Algorithms, Advanced Programming, Operating Systems
+
+  - title: Technical Skills
+    layout: text
+    content: |
+      **Languages:** Python, JavaScript/TypeScript, C/C++, Java, SQL (Postgres), HTML/CSS
+
+      **Frameworks:** React, Node.js, FastAPI, Socket.io, Material-UI, Tailwind CSS
+
+      **Developer Tools:** Git, Docker, Hugging Face, Roboflow, Clerk, ElevenLabs, Piston, SonarQube, Render, Netlify, Jira
+
+      **Libraries:** PyTorch, YOLOv8, ResNet, CLIP, Scikit-Learn, Pandas, NumPy, Matplotlib, Seaborn, NLTK
 
 # Footer
 footer_show_references: true
-# references_title: References on request (Override references text)
 
 # Build settings
 # theme: modern-resume-theme (Use this is you are hosting your resume yourself)
@@ -124,9 +131,9 @@ sass:
   style: compressed
 
 plugins:
- - jekyll-seo-tag
+  - jekyll-seo-tag
 
-exclude : [
+exclude: [
   "Gemfile",
   "Gemfile.lock",
   "node_modules",
